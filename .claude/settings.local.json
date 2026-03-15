@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd C:/Users/joeyp/PycharmProjects/anime-subtitle-companion/frontend && npm install 2>&1)",
+      "Bash(cd C:/Users/joeyp/PycharmProjects/anime-subtitle-companion/backend && python -c \"from app.main import app; print\\('FastAPI app created OK'\\)\" 2>&1)",
+      "Bash(cd C:/Users/joeyp/PycharmProjects/anime-subtitle-companion/frontend && npx tsc --noEmit 2>&1)",
+      "Bash(cd C:/Users/joeyp/PycharmProjects/anime-subtitle-companion/backend && python -c \"from app.config import settings; print\\('LLM_API_BASE:', settings.LLM_API_BASE\\); print\\('PROJECT_ROOT .env path:', str\\(settings.model_config.get\\('env_file', 'NOT SET'\\)\\)\\)\" 2>&1)",
+      "Bash(curl -s --connect-timeout 5 http://192.168.2.94:1234/v1/models 2>&1 || echo \"CURL FAILED with exit code $?\")",
+      "Bash(curl -s --connect-timeout 5 http://192.168.2.94:1234/v1/models 2>&1)",
+      "Bash(curl -s -X POST http://192.168.2.94:1234/v1/chat/completions -H \"Content-Type: application/json\" -d '{\"model\":\"qwen/qwen3.5-35b-a3b\",\"messages\":[{\"role\":\"user\",\"content\":\"say hello\"}],\"max_tokens\":100,\"response_format\":{\"type\":\"json_object\"}}' 2>&1 | head -50)",
+      "Bash(cd C:/Users/joeyp/PycharmProjects/anime-subtitle-companion/backend && python -c \"from app.main import app; print\\('OK'\\)\" 2>&1)",
+      "Bash(curl -s --connect-timeout 10 http://192.168.2.94:1234/v1/models 2>&1)",
+      "Bash(curl -s --connect-timeout 5 http://192.168.2.94:1234/ 2>&1; echo \"EXIT: $?\")",
+      "Bash(curl -s --connect-timeout 30 -m 300 -X POST http://192.168.2.94:1234/v1/chat/completions -H \"Content-Type: application/json\" -d '{\"model\":\"qwen/qwen3.5-35b-a3b\",\"messages\":[{\"role\":\"user\",\"content\":\"Say hello in Japanese\"}],\"max_tokens\":100,\"temperature\":0.3}' 2>&1)",
+      "Bash(curl -s --connect-timeout 30 -m 600 -X POST http://192.168.2.94:1234/v1/chat/completions -H \"Content-Type: application/json\" -d '{\n  \"model\":\"qwen/qwen3.5-35b-a3b\",\n  \"messages\":[\n    {\"role\":\"system\",\"content\":\"You are a JSON-only response engine. Do NOT include any thinking, reasoning, or explanation. Respond with ONLY valid JSON. No preamble.\"},\n    {\"role\":\"user\",\"content\":\"Analyze this Japanese subtitle line. Respond with ONLY a JSON object.\\\\n\\\\nLine: こんにちは\\\\n\\\\n{\\\\\"tokens\\\\\":[{\\\\\"surface\\\\\":\\\\\"...\\\\\",\\\\\"reading\\\\\":\\\\\"...\\\\\",\\\\\"gloss\\\\\":\\\\\"...\\\\\"}],\\\\\"natural_translation\\\\\":\\\\\"...\\\\\"}\"}\n  ],\n  \"max_tokens\":2000,\n  \"temperature\":0.3\n}' 2>&1)"
+    ]
+  }
+}

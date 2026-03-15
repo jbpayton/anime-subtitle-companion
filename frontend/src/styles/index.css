@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  background: #0f0f14;
+  color: #e4e4e7;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a24;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f50;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52526a;
+}
